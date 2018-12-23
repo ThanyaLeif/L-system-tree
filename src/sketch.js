@@ -1,24 +1,18 @@
 //Creating fractal trees with L-SysteM
 
-//----------RULES OF L-SYSTEM---------
-//variables: A B
-// axiom: A
-// rules: (A -> AB), (B -> A)
+//----------RULE OF L-SYSTEM---------
+//variables: F+-[]
+// axiom: F
+// rules: F -> FF+[+F-F-F]-[-F+F+F]
 
-var axiom = "A";
+var axiom = "F";
 var sentence = axiom;
 
 //Rule for the convertion of A's
 var rules = [];
 rules[0] = {
-	a: "A",
-	b: "AB"
-}
-
-//Rule for the convertion of B's
-rules[1] = {
-	a: "B",
-	b: "A"
+	a: "F",
+	b: "FF+[+F-F-F]-[-F+F+F]"
 }
 
 function generate(){
